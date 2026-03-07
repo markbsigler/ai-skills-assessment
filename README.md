@@ -42,6 +42,14 @@ This assessment measures AI skills across **five dimensions** on a 0–9 scale:
 
 This assessment should be revisited every **6 months**. AI capabilities and tooling evolve rapidly — scores earned today reflect a moment in time.
 
+## Author
+
+**[Mark B. Sigler](https://www.linkedin.com/in/markbsigler/)**
+
 ## License
 
-This project is provided for internal use. See repository settings for access and licensing details.
+[![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+This work is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE.md) license.
+
+You are free to share and adapt this material for any purpose, even commercially, as long as you give appropriate credit and distribute contributions under the same license. See [LICENSE.md](LICENSE.md) for full terms.
