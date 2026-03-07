@@ -1,16 +1,20 @@
 # AI Skills Assessment for R&D Engineers
 
+> **Version:** 0.3.0
+
 A self-assessment survey for measuring AI proficiency across enterprise software development teams. Designed to identify growth opportunities — not evaluate performance.
+
+Benchmark tasks reference a primary toolchain of **GitHub Copilot**, **Cursor**, and **Claude** for AI-assisted development, **vLLM** for model serving, and **LangGraph** for agent orchestration — but are illustrative, not prescriptive. Three key concepts are assessed throughout: [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) for tool integration, [Agent Skills](https://agentskills.io/) for packaging reusable capabilities, and project-level AI configuration (AGENTS.md, custom instruction files, rules) for steering AI behavior per-repository.
 
 ## Overview
 
 This assessment measures AI skills across **eight dimensions** on a 0–9 scale:
 
 | # | Dimension | Focus |
-|---|-----------|-------|
+| --- | --- | --- |
 | 1 | **Prompt Engineering** | Communicating with AI models to produce useful outputs |
 | 2 | **AI-Assisted Code Generation & Review** | Using AI to write, review, and improve production code |
-| 3 | **AI-Assisted Design & Technical Communication** | Using AI for architecture, design decisions, and technical writing |
+| 3 | **AI-Assisted Design & Technical Communication** | Using AI for architecture, design decisions, planning, and technical writing |
 | 4 | **Debugging & Root Cause Analysis** | Diagnosing and resolving defects and performance issues with AI |
 | 5 | **AI Tool Fluency** | Practical experience with AI tooling, MCP, Agent Skills, and integrations |
 | 6 | **AI Automation & Agents** | Designing and orchestrating AI agents for multi-step workflows |
@@ -20,13 +24,13 @@ This assessment measures AI skills across **eight dimensions** on a 0–9 scale:
 ## Scoring
 
 | 0 | 1–2 | 3–4 | 5–6 | 7–8 | 9 |
-|---|-----|-----|-----|-----|---|
+| --- | --- | --- | --- | --- | --- |
 | No Experience | Foundational | Developing | Proficient | Advanced | Expert |
 
-**Total score range: 0–72**
+### Total score range: 0–72
 
 | Total Score | Profile | What It Means |
-|-------------|---------|---------------|
+| --- | --- | --- |
 | 0–14 | **Beginner** | AI tools are new. Focus on daily use of at least one tool to build fluency. |
 | 15–28 | **Developing** | Building habits. Prioritize prompt quality and consistent tool integration. |
 | 29–43 | **Proficient** | Effective practitioner. Begin contributing patterns and practices to the team. |
