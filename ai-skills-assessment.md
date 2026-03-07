@@ -1,9 +1,15 @@
 # AI Skills Assessment for R&D Engineers
-### Enterprise Software Development | Self-Assessment Survey
+
+## Enterprise Software Development | Self-Assessment Survey
+
+> **Version:** 0.3.0 | **Last Updated:** 2025-06-01
 
 **Instructions:** For each dimension, select the score (0–9) that best describes your current capability. Be honest — this assessment is designed to identify growth opportunities, not to evaluate performance. Scores are defined by the highest level you can perform *consistently and independently*.
 
+> **Note on examples:** Benchmark tasks reference our primary toolchain — **GitHub Copilot**, **Cursor**, and **Claude** for AI-assisted development, **vLLM** for model serving, and **LangGraph** for agent orchestration — but are *illustrative, not prescriptive*. The AI tooling landscape evolves rapidly; substitute current equivalents when self-assessing. Three key concepts are referenced throughout: [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) for tool integration, [Agent Skills](https://agentskills.io/) for packaging reusable capabilities, and project-level AI configuration (AGENTS.md, custom instruction files, rules) for steering AI behavior per-repository.
+
 **Score Key:**
+
 | 0 | 1–2 | 3–4 | 5–6 | 7–8 | 9 |
 |---|-----|-----|-----|-----|---|
 | No Experience | Foundational | Developing | Proficient | Advanced | Expert |
@@ -17,24 +23,25 @@
 | Score | Level | Description |
 |-------|-------|-------------|
 | 0 | No Experience | Has not interacted with an AI coding assistant. |
-| 1 | First Contact | Asks AI to explain code snippets or answer basic syntax questions. |
+| 1 | First Contact | Uses AI to explain unfamiliar code, answer syntax questions, or learn new technologies and frameworks. |
 | 2 | Basic Generation | Uses AI to generate simple functions from a one-line natural language description. |
 | 3 | Structured Prompts | Writes multi-part prompts with context, constraints, and a specified output format. |
 | 4 | Context Management | Strategically includes relevant code, schemas, or docs to steer output quality. |
 | 5 | Iterative Refinement | Uses follow-up prompts and correction cycles to reliably reach a correct result. |
-| 6 | System Prompt Design | Authors system prompts that shape model persona, output format, and guardrails. |
+| 6 | System Prompt Design | Authors system prompts and project-level instruction files (AGENTS.md, custom instructions) that shape model persona, output format, and guardrails. |
 | 7 | Few-Shot Mastery | Constructs few-shot examples that consistently produce specialized, high-quality outputs. |
-| 8 | Prompt Architecture | Designs modular, reusable prompt libraries and templates for team-wide use. |
+| 8 | Prompt Architecture | Designs modular, reusable prompt libraries, instruction file hierarchies, and configuration templates for team-wide use across repositories. |
 | 9 | Evaluation & Optimization | Runs systematic evals to benchmark prompt variants on quality, accuracy, and cost. |
 
-**Your Score (circle or enter):** &nbsp;&nbsp; 0 &nbsp; 1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp; 9
+**Your Score:** \_\_\_\_\_ / 9
 
 **Practical Benchmark Tasks by Level:**
+
 - **Level 2:** Prompt an AI to write a `debounce` utility function from a one-line description.
-- **Level 3:** Write a single prompt that produces a TypeScript interface, an implementation, and a unit test.
-- **Level 5:** Starting from a buggy AI output, reach a working, tested solution in 5 prompts or fewer.
-- **Level 7:** Build a few-shot prompt that reliably transforms legacy jQuery into idiomatic React hooks.
-- **Level 9:** Design and run an eval harness benchmarking 3 prompt variants on code quality and token cost.
+- **Level 4:** Provide a database schema and API contract; prompt AI to produce a data access layer that conforms to both.
+- **Level 6:** Author an AGENTS.md or custom instruction file for a project that reliably steers AI output to follow your team's coding standards and architectural patterns.
+- **Level 8:** Design a layered instruction architecture (global rules, repo-level AGENTS.md, directory-scoped overrides) that your team uses across multiple repositories.
+- **Level 9:** Design and run an eval harness benchmarking 3+ prompt variants on code quality, accuracy, and token cost.
 
 ---
 
@@ -45,7 +52,7 @@
 | Score | Level | Description |
 |-------|-------|-------------|
 | 0 | No Experience | Has not used AI for code generation or review. |
-| 1 | Autocomplete User | Accepts inline completions from tools like GitHub Copilot without modification. |
+| 1 | Autocomplete User | Accepts inline completions from GitHub Copilot or Cursor without modification. |
 | 2 | Function Generation | Generates simple, self-contained functions and verifies they work. |
 | 3 | Feature Scaffolding | Uses AI to scaffold complete features (routes, models, handlers) from a spec. |
 | 4 | Guided Refactoring | Directs AI to refactor existing code for readability, performance, or pattern conformance. |
@@ -55,20 +62,50 @@
 | 8 | Cross-Codebase Reasoning | Uses AI to reason across multiple services or repos to diagnose and fix systemic issues. |
 | 9 | AI-Native Workflows | Designs team-level AI-augmented development workflows with measurable quality outcomes. |
 
-**Your Score (circle or enter):** &nbsp;&nbsp; 0 &nbsp; 1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp; 9
+**Your Score:** \_\_\_\_\_ / 9
 
 **Practical Benchmark Tasks by Level:**
-- **Level 3:** Provide an OpenAPI spec and have AI generate a complete set of Express route handlers.
-- **Level 5:** Generate a full test suite for an existing service with >80% meaningful branch coverage.
+
+- **Level 2:** Generate a CRUD handler for a single resource and validate it passes basic tests.
+- **Level 4:** Use AI to refactor a 200-line function into smaller, well-named functions with preserved behavior.
 - **Level 6:** Use AI to review a real PR and produce a structured report of issues by severity.
-- **Level 7:** Migrate a module of 500+ lines from a legacy pattern to a modern equivalent using AI-assisted steps.
+- **Level 8:** Use AI to trace a bug across three or more services by feeding it code and logs from each.
 - **Level 9:** Document and measure the before/after impact of an AI workflow introduced to your team.
 
 ---
 
-## Section 3: Debugging & Root Cause Analysis
+## Section 3: AI-Assisted Design & Technical Communication
 
-*How effectively you use AI to diagnose and resolve defects.*
+*How effectively you use AI as a thinking partner for architecture, design decisions, planning, and technical writing.*
+
+| Score | Level | Description |
+|-------|-------|-------------|
+| 0 | No Experience | Has not used AI for design, planning, or documentation tasks. |
+| 1 | Explanation & Summary | Uses AI to summarize existing documentation or explain architectural concepts. |
+| 2 | Draft Generation | Uses AI to produce first drafts of technical documents (READMEs, API docs, user stories, acceptance criteria, commit messages, PR descriptions). |
+| 3 | Design Exploration | Uses AI to brainstorm design alternatives, compare approaches, and articulate trade-offs for a given problem. |
+| 4 | Spec & RFC Authoring | Uses AI to co-author technical specs, RFCs, or ADRs with structured reasoning, constraints, and decision rationale. |
+| 5 | Architecture Review | Uses AI to review system designs, identify risks, evaluate scalability, and suggest improvements — providing it with diagrams, schemas, or architecture descriptions. |
+| 6 | Cross-Cutting Analysis | Uses AI to analyze how a proposed change impacts multiple systems, teams, or non-functional requirements (performance, security, observability). |
+| 7 | Sprint & Roadmap Planning | Uses AI to support sprint-level and strategic planning — decomposing epics into stories, estimating story points (surfacing hidden complexity, comparing against historical velocity, challenging assumptions), identifying dependencies, refining backlogs, analyzing retrospective patterns, and planning large-scale migrations. |
+| 8 | Living Documentation | Builds AI-assisted workflows that keep documentation synchronized with code — generating or updating docs, release notes, and changelogs as part of the development process. |
+| 9 | Design System Leadership | Uses AI to establish and maintain org-wide design standards, reference architectures, and decision frameworks that scale across teams. |
+
+**Your Score:** \_\_\_\_\_ / 9
+
+**Practical Benchmark Tasks by Level:**
+
+- **Level 2:** Use AI to draft 5 user stories with acceptance criteria for a feature, plus a complete README for an existing service.
+- **Level 4:** Co-author an ADR (Architecture Decision Record) with AI, including context, alternatives considered, and rationale for the chosen approach.
+- **Level 6:** Feed AI a proposed architecture change and have it produce an impact analysis across three or more system dimensions (performance, security, cost, operability).
+- **Level 8:** Set up an AI-assisted workflow that automatically generates or updates documentation (e.g., API docs, runbooks, release notes) when code changes are merged.
+- **Level 9:** Use AI to create and maintain a reference architecture document and decision framework that multiple teams adopt as a standard.
+
+---
+
+## Section 4: Debugging & Root Cause Analysis
+
+*How effectively you use AI to diagnose and resolve defects, including performance issues.*
 
 | Score | Level | Description |
 |-------|-------|-------------|
@@ -76,103 +113,192 @@
 | 1 | Error Lookup | Pastes error messages into AI to get an explanation of what went wrong. |
 | 2 | Fix Suggestion | Shares a failing code block and applies the AI-suggested fix. |
 | 3 | Hypothesis Generation | Uses AI to brainstorm multiple possible root causes before investigating. |
-| 4 | Trace Analysis | Provides stack traces or logs and uses AI to identify the fault and likely fix. |
+| 4 | Trace & Profile Analysis | Provides stack traces, logs, or profiler output (flame graphs, slow-query logs, memory dumps) and uses AI to identify the fault and likely fix. |
 | 5 | Regression Isolation | Uses AI to narrow down which commit, change, or dependency introduced a regression. |
 | 6 | Distributed Tracing | Uses AI to reason across multi-service logs and traces to identify cross-system failures. |
-| 7 | Proactive Hardening | Uses AI to identify and fix latent bugs before they surface in production. |
+| 7 | Proactive Hardening | Uses AI to identify and fix latent bugs, performance bottlenecks, and reliability risks before they surface in production. |
 | 8 | Incident Automation | Integrates AI into incident workflows to triage, summarize, and suggest mitigations automatically. |
 | 9 | Systemic Pattern Detection | Uses AI to identify classes of defects across a codebase and design org-wide remediation plans. |
 
-**Your Score (circle or enter):** &nbsp;&nbsp; 0 &nbsp; 1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp; 9
+**Your Score:** \_\_\_\_\_ / 9
 
 **Practical Benchmark Tasks by Level:**
-- **Level 3:** Given a failing test, use AI to generate a ranked list of 5 hypotheses before touching the code.
-- **Level 5:** Use AI to identify the commit that introduced a performance regression from a git log.
+
+- **Level 2:** Share a failing unit test with AI and apply the suggested fix to make it pass.
+- **Level 4:** Provide a stack trace and a flame graph or slow-query log to AI; have it pinpoint the root cause and recommend a fix.
 - **Level 6:** Feed multi-service logs from a real incident into AI and produce a root-cause narrative.
 - **Level 8:** Design an AI-assisted runbook that auto-triages a known class of production alerts.
 - **Level 9:** Analyze an entire repo for a structural anti-pattern and produce an AI-assisted remediation plan.
 
 ---
 
-## Section 4: AI Tool & Platform Fluency
+## Section 5: AI Tool Fluency
 
-*Breadth and depth of practical experience with AI development tooling, including agentic and parallel AI workflows.*
+*Breadth and depth of practical experience with AI development tooling, integration protocols ([MCP](https://modelcontextprotocol.io/)), and extensibility formats ([Agent Skills](https://agentskills.io/)).*
 
 | Score | Level | Description |
 |-------|-------|-------------|
 | 0 | No Experience | Has not used any AI development tools. |
-| 1 | Single Tool | Uses one AI assistant (e.g., ChatGPT, Copilot) for occasional tasks. |
-| 2 | Multi-Tool Awareness | Has tried 2–3 tools and can articulate basic differences between them. |
-| 3 | Contextual Tool Selection | Chooses tools based on task type (e.g., Copilot for inline, Claude for reasoning). |
-| 4 | IDE Integration | Fully integrates AI tools into the IDE and dev environment for daily workflows. |
-| 5 | API Usage | Calls LLM APIs directly to build custom scripts, tools, or internal utilities. |
-| 6 | Sequential Agent Workflows | Uses agentic frameworks (LangChain, CrewAI, Claude Code) to build multi-step, single-agent automated tasks. |
-| 7 | Parallel Agent Orchestration | Designs and runs multiple specialized AI agents concurrently — decomposing a problem into independent subtasks assigned to parallel agents, then synthesizing results. Understands inter-agent coordination, result merging, and failure isolation. |
-| 8 | Platform Engineering | Builds internal AI platforms with agent orchestration layers, parallel execution pipelines, RAG grounding, prompt management, and cost/latency observability. |
-| 9 | Industry Leadership | Contributes to open source, publishes research, or advises on enterprise agentic AI architecture and strategy. |
+| 1 | Single Tool | Uses one AI assistant (e.g., GitHub Copilot or Claude) for occasional tasks. |
+| 2 | Multi-Tool Awareness | Has tried multiple tools (e.g., Copilot, Cursor, Claude, Gemini) and can articulate their strengths and trade-offs. |
+| 3 | Contextual Tool & Model Selection | Chooses tools and models based on task type (e.g., Copilot for inline completions, Cursor for multi-file edits, Claude for complex reasoning); understands cost/quality/latency trade-offs between models; aware that tools can be extended via protocols, skills, and configuration files. |
+| 4 | IDE & Project Configuration | Fully integrates AI tools into the IDE for daily workflows; configures project-level instruction files (AGENTS.md, Cursor rules, `copilot-instructions.md`, `CLAUDE.md`) and uses existing Agent Skills and community MCP servers. |
+| 5 | API & Protocol Literacy | Calls LLM APIs directly (e.g., Claude API, OpenAI API) or serves models via inference platforms (e.g., vLLM); understands the MCP architecture (servers, tools, resources, prompts) and how Agent Skills package capabilities for reuse across tools; aware of per-token costs and budgets for API usage. |
+| 6 | MCP & Skills Configuration | Configures MCP servers to connect AI tools to external data sources, APIs, and services; identifies high-value use cases for Agent Skills and applies them to enhance team workflows. |
+| 7 | Custom Integration Development | Builds custom MCP servers and authors Agent Skills that package domain expertise, workflows, or tooling for reuse across teams and tools. |
+| 8 | Platform Integration | Integrates MCP servers, Agent Skills, instruction file standards, and AI tooling into CI/CD pipelines, observability stacks, and team infrastructure. |
+| 9 | Ecosystem Leadership | Contributes to open-source AI tooling, MCP server registries, or Agent Skills ecosystems; evaluates emerging tools and standards for org adoption. |
 
-**Your Score (circle or enter):** &nbsp;&nbsp; 0 &nbsp; 1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp; 9
+**Your Score:** \_\_\_\_\_ / 9
 
 **Practical Benchmark Tasks by Level:**
-- **Level 3:** Compare Claude vs. Copilot vs. Gemini for a specific task type and explain your choice.
-- **Level 5:** Write a CLI tool that takes a filename and uses an LLM API to generate a code review.
-- **Level 6:** Build a sequential AI agent that reads a Jira ticket, generates code, and opens a draft PR — each step triggered by the prior output.
-- **Level 7:** Decompose a large task (e.g., auditing 10 microservices for security issues) into parallel agents running concurrently, each scoped to one service, with a final agent that merges findings into a single report. Handle partial failures gracefully.
-- **Level 8:** Build an internal platform that schedules, runs, monitors, and logs parallel agent workflows — including cost tracking, retry logic, and a results dashboard.
-- **Level 9:** Publish an internal whitepaper or external post on parallel agentic AI architecture based on real production experience.
+
+- **Level 2:** Compare Copilot, Cursor, and Claude for a specific task type and explain which you'd choose and why.
+- **Level 4:** Set up AGENTS.md and tool-specific instruction files for a project; install and use an existing Agent Skill or community MCP server to extend your AI assistant's capabilities.
+- **Level 6:** Configure an MCP server that connects your AI assistant to an internal API or database; identify 3 use cases where Agent Skills would improve your team's AI workflows.
+- **Level 8:** Build a custom MCP server for an internal service and author an Agent Skill that codifies a team workflow; integrate both into your team's developer environment.
+- **Level 9:** Contribute MCP servers or Agent Skills to the open-source ecosystem; publish an internal evaluation of emerging integration standards.
 
 ---
 
-## Section 5: AI Safety, Ethics & Risk Management
+## Section 6: AI Automation & Agents
 
-*How thoughtfully you apply AI within appropriate boundaries in an enterprise context.*
+*How effectively you design and orchestrate AI agents to automate complex, multi-step workflows — leveraging MCP for tool access and Agent Skills for reusable capabilities.*
+
+| Score | Level | Description |
+|-------|-------|-------------|
+| 0 | No Experience | Has not used AI for task automation. |
+| 1 | Automation Awareness | Understands that AI can automate multi-step tasks beyond single-turn chat. |
+| 2 | Simple Automation | Uses AI to automate simple, repeatable tasks (boilerplate generation, formatting, commit messages). |
+| 3 | Workflow Scripting | Chains multiple AI calls in scripts to automate multi-step processes; understands the cost and latency implications of chained LLM calls. |
+| 4 | Sequential Agent Design | Builds single-agent workflows with defined steps, branching logic, and error handling; equips agents with MCP tools and Agent Skills for extended capabilities. |
+| 5 | Multi-Agent Coordination | Designs systems with multiple specialized agents working on related subtasks, each with scoped tool access via MCP. |
+| 6 | Parallel Agent Orchestration | Runs independent agents concurrently — decomposing problems into parallel subtasks with result synthesis and failure isolation. |
+| 7 | Agent Framework Mastery | Uses and extends agentic frameworks (e.g., LangGraph) for production-grade workflows; packages reusable agent capabilities as Agent Skills. |
+| 8 | Platform Engineering | Builds orchestration platforms with model serving (e.g., vLLM), scheduling, monitoring, cost tracking, retry logic, and a results dashboard. |
+| 9 | Industry Leadership | Publishes research, contributes to open source, or advises on enterprise agentic AI architecture and strategy. |
+
+**Your Score:** \_\_\_\_\_ / 9
+
+**Practical Benchmark Tasks by Level:**
+
+- **Level 2:** Use AI to automate a repetitive task you do weekly (e.g., generating changelog entries from commits).
+- **Level 4:** Build a sequential AI agent that reads a ticket, generates code, runs tests, and opens a draft PR — equipping it with MCP tools for repository and issue-tracker access.
+- **Level 6:** Decompose a large task (e.g., auditing 10 microservices for security issues) into parallel agents running concurrently, with a final agent that merges findings.
+- **Level 8:** Build an internal platform using LangGraph and vLLM (or equivalent) that schedules, runs, monitors, and logs parallel agent workflows — including cost tracking and a results dashboard.
+- **Level 9:** Publish an internal whitepaper or external post on agentic AI architecture based on real production experience.
+
+---
+
+## Section 7: Knowledge Engineering & RAG
+
+*How effectively you curate, retrieve, and ground AI outputs in authoritative knowledge sources — including packaging domain knowledge as [Agent Skills](https://agentskills.io/) and exposing data via [MCP](https://modelcontextprotocol.io/) resources.*
+
+| Score | Level | Description |
+|-------|-------|-------------|
+| 0 | No Experience | Has not considered how context or knowledge sources affect AI output quality. |
+| 1 | Context Awareness | Understands that AI outputs depend heavily on the context provided. |
+| 2 | Manual Context Curation | Selects and includes relevant files, docs, or examples in prompts for better results. |
+| 3 | Context Window Management | Understands token limits and strategically manages what fits in context — prioritizing, truncating, or summarizing inputs. |
+| 4 | RAG Fundamentals | Uses Retrieval-Augmented Generation tools or patterns to ground AI responses in source documents. |
+| 5 | Embedding & Search | Builds or configures vector stores and semantic search to power AI-assisted retrieval; exposes knowledge via MCP resources. |
+| 6 | Knowledge Packaging | Designs structured knowledge bases optimized for AI consumption (chunking, indexing, metadata); authors Agent Skills and maintains instruction files (AGENTS.md, rules) that encode domain expertise and procedural knowledge for portable reuse. |
+| 7 | Multi-Source Synthesis | Builds pipelines that retrieve and synthesize information from heterogeneous sources (docs, code, databases, APIs) using MCP and RAG in combination. |
+| 8 | Retrieval Evaluation | Measures retrieval quality (precision, recall, relevance) and systematically optimizes RAG pipelines. |
+| 9 | Enterprise Knowledge Architecture | Designs org-wide knowledge systems — combining RAG pipelines, MCP resource servers, and Agent Skills libraries — that serve as AI grounding layers across multiple products and teams. |
+
+**Your Score:** \_\_\_\_\_ / 9
+
+**Practical Benchmark Tasks by Level:**
+
+- **Level 2:** Improve an AI response by manually curating the 3 most relevant source files into the prompt context.
+- **Level 4:** Set up a RAG pipeline that answers questions about your project's documentation with source citations.
+- **Level 6:** Author an Agent Skill that packages domain-specific knowledge (e.g., coding standards, architecture decisions) so any skills-compatible AI tool can use it; design a chunking strategy for a large codebase.
+- **Level 8:** Measure retrieval precision and recall for your RAG system and improve them by 20%+ through pipeline tuning.
+- **Level 9:** Architect a cross-team knowledge platform combining RAG, MCP resources, and an Agent Skills library as the grounding layer for multiple AI-powered applications.
+
+---
+
+## Section 8: AI Safety, Ethics & Risk Management
+
+*How thoughtfully you apply AI within appropriate boundaries in an enterprise context — including knowing when AI is not the right tool.*
 
 | Score | Level | Description |
 |-------|-------|-------------|
 | 0 | No Awareness | Has not considered risks of AI use in software development. |
 | 1 | Basic Caution | Knows not to share passwords or PII with AI tools. |
 | 2 | Policy Awareness | Understands company AI use policy and follows it consistently. |
-| 3 | Data Classification | Correctly classifies which data types are safe to include in AI prompts. |
-| 4 | Output Validation | Always reviews and tests AI-generated code before committing; never blindly trusts outputs. |
+| 3 | Data Classification | Correctly classifies which data types are safe to include in prompts across tools (Copilot, Cursor, Claude, etc.) based on data residency and model provider policies. |
+| 4 | Output Validation & Judgment | Always reviews and tests AI-generated code before committing; never blindly trusts outputs. Recognizes when AI is the wrong tool for a task — e.g., when correctness is critical and unverifiable, when the domain is too novel for the model, or when manual work would be faster and more reliable. |
 | 5 | IP & Licensing | Evaluates AI-generated code for potential copyright, license, and IP exposure. |
-| 6 | Threat Modeling | Identifies AI-specific attack surfaces (prompt injection, model poisoning) in system designs. |
-| 7 | Responsible AI Advocacy | Actively educates teammates on responsible AI use and raises concerns about misuse. |
-| 8 | Policy Contribution | Contributes to or authors team/org AI usage guidelines and review processes. |
+| 6 | Project Risk Assessment | Conducts AI-specific risk assessments for own projects — identifying where AI use introduces quality, security, or compliance risks. |
+| 7 | Threat Modeling | Identifies AI-specific attack surfaces (prompt injection, model poisoning, data exfiltration) in system designs and proposes mitigations. |
+| 8 | Policy & Advocacy | Authors team/org AI usage guidelines; actively educates teammates on responsible AI use — including when not to use AI — and raises concerns about misuse. |
 | 9 | Governance Leadership | Leads enterprise AI governance initiatives, audits, or compliance frameworks. |
 
-**Your Score (circle or enter):** &nbsp;&nbsp; 0 &nbsp; 1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp; 9
+**Your Score:** \_\_\_\_\_ / 9
 
 **Practical Benchmark Tasks by Level:**
-- **Level 3:** Classify a set of 10 data types as Safe / Needs Review / Never use in AI prompts.
-- **Level 5:** Audit 3 AI-generated code samples for potential license or IP issues.
-- **Level 6:** Produce a threat model for a product feature that uses an LLM as a component.
-- **Level 8:** Draft a team AI usage policy covering data handling, review requirements, and prohibited uses.
+
+- **Level 2:** Identify which of your company's AI policies apply to a given development scenario.
+- **Level 4:** Review 3 AI-generated code samples and document every assumption, edge case, or risk you find before committing. For a fourth task, explain why AI is the wrong approach and what you'd do instead.
+- **Level 6:** Conduct an AI risk assessment for a feature you own — identifying data sensitivity, failure modes, and mitigation steps.
+- **Level 8:** Draft a team AI usage policy covering data handling, review requirements, prohibited uses, and guidance on when AI should not be used.
 - **Level 9:** Lead a cross-functional AI risk review and produce a governance framework recommendation.
 
 ---
 
 ## Score Summary
 
-| # | Dimension | Your Score |
-|---|-----------|:----------:|
-| 1 | Prompt Engineering | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| 2 | AI-Assisted Code Generation & Review | |
-| 3 | Debugging & Root Cause Analysis | |
-| 4 | AI Tool & Platform Fluency | |
-| 5 | AI Safety, Ethics & Risk Management | |
-| | **Total (out of 45)** | |
+*Use the Score Key to determine your level per dimension.*
+
+| # | Dimension | Score (0–9) | Level |
+|---|-----------|:-----------:|-------|
+| 1 | Prompt Engineering | | |
+| 2 | AI-Assisted Code Generation & Review | | |
+| 3 | AI-Assisted Design & Technical Communication | | |
+| 4 | Debugging & Root Cause Analysis | | |
+| 5 | AI Tool Fluency | | |
+| 6 | AI Automation & Agents | | |
+| 7 | Knowledge Engineering & RAG | | |
+| 8 | AI Safety, Ethics & Risk Management | | |
+| | **Total (out of 72)** | | |
+
+**Per-dimension level mapping** (from Score Key):
+
+| Score | Level |
+|:-----:|-------|
+| 0 | No Experience |
+| 1–2 | Foundational |
+| 3–4 | Developing |
+| 5–6 | Proficient |
+| 7–8 | Advanced |
+| 9 | Expert |
 
 ---
 
 ## Score Interpretation
 
 | Total Score | Profile | What It Means |
-|-------------|---------|---------------|
-| 0–9 | **Beginner** | AI tools are new. Focus on daily use of at least one tool to build fluency. |
-| 10–18 | **Developing** | Building habits. Prioritize prompt quality and consistent tool integration. |
-| 19–27 | **Proficient** | Effective practitioner. Begin contributing patterns and practices to the team. |
-| 28–36 | **Advanced** | Strong multiplier. Lead initiatives, build tooling, and mentor others. |
-| 37–45 | **Expert** | Organizational asset. Drive strategy, governance, and cross-team AI adoption. |
+|:-----------:|---------|---------------|
+| 0–14 | **Beginner** | AI tools are new. Focus on daily use of at least one tool to build fluency. |
+| 15–28 | **Developing** | Building habits. Prioritize prompt quality and consistent tool integration. |
+| 29–43 | **Proficient** | Effective practitioner. Begin contributing patterns and practices to the team. |
+| 44–57 | **Advanced** | Strong multiplier. Lead initiatives, build tooling, and mentor others. |
+| 58–72 | **Expert** | Organizational asset. Drive strategy, governance, and cross-team AI adoption. |
+
+---
+
+## What to Focus on Next
+
+Use these heuristics to prioritize your development:
+
+1. **Any dimension below 3?** Start there. Foundational gaps limit your ability to benefit from AI in daily work.
+2. **Safety below your other scores?** Close that gap next. High capability without risk awareness creates liability.
+3. **Design & Communication lagging Code Generation?** Senior engineers get the most leverage from AI-assisted design, architecture, and technical writing — not just implementation.
+4. **Widest gap between dimensions?** Balance your profile — a well-rounded practitioner contributes more than a narrow specialist.
+5. **All dimensions 5+?** Focus on the areas most relevant to your role and team needs, and begin mentoring others.
+6. **All dimensions 7+?** Shift toward organizational impact — build tooling, author guidelines, and lead adoption.
 
 ---
 
