@@ -2,7 +2,7 @@
 
 ## Enterprise Software Development | Self-Assessment Survey
 
-> **Version:** 0.3.0 | **Last Updated:** 2025-06-01
+> **Version:** 0.4.0 | **Last Updated:** 2025-06-01
 
 **Instructions:** For each dimension, select the score (0–9) that best describes your current capability. Be honest — this assessment is designed to identify growth opportunities, not to evaluate performance. Scores are defined by the highest level you can perform *consistently and independently*.
 
@@ -11,7 +11,7 @@
 **Score Key:**
 
 | 0 | 1–2 | 3–4 | 5–6 | 7–8 | 9 |
-|---|-----|-----|-----|-----|---|
+| --- | --- | --- | --- | --- | --- |
 | No Experience | Foundational | Developing | Proficient | Advanced | Expert |
 
 ---
@@ -21,7 +21,7 @@
 *How effectively you communicate with AI models to produce useful outputs.*
 
 | Score | Level | Description |
-|-------|-------|-------------|
+| --- | --- | --- |
 | 0 | No Experience | Has not interacted with an AI coding assistant. |
 | 1 | First Contact | Uses AI to explain unfamiliar code, answer syntax questions, or learn new technologies and frameworks. |
 | 2 | Basic Generation | Uses AI to generate simple functions from a one-line natural language description. |
@@ -50,7 +50,7 @@
 *How effectively you use AI to write, review, and improve production code.*
 
 | Score | Level | Description |
-|-------|-------|-------------|
+| --- | --- | --- |
 | 0 | No Experience | Has not used AI for code generation or review. |
 | 1 | Autocomplete User | Accepts inline completions from GitHub Copilot or Cursor without modification. |
 | 2 | Function Generation | Generates simple, self-contained functions and verifies they work. |
@@ -74,12 +74,41 @@
 
 ---
 
-## Section 3: AI-Assisted Design & Technical Communication
+## Section 3: AI-Assisted Testing & Quality Assurance
+
+*How effectively you use AI to design, generate, and maintain tests — and to improve overall software quality.*
+
+| Score | Level | Description |
+| --- | --- | --- |
+| 0 | No Experience | Has not used AI for testing or quality assurance. |
+| 1 | Test Explanation | Uses AI to explain what existing tests do or why they fail. |
+| 2 | Unit Test Generation | Generates individual unit tests from existing functions and verifies they pass. |
+| 3 | Coverage-Driven Testing | Uses AI to identify coverage gaps and generate targeted tests for untested paths and edge cases. |
+| 4 | Test Data & Fixtures | Uses AI to generate realistic test data, fixtures, and synthetic datasets for complex scenarios including boundary conditions and error states. |
+| 5 | Test Suite Design | Uses AI to design comprehensive test strategies for a service — selecting test types (unit, integration, e2e, contract), defining boundaries, and structuring suites for maintainability. |
+| 6 | Quality Validation | Uses AI for mutation testing, flaky test diagnosis, and evaluating whether a test suite actually catches the regressions it should. |
+| 7 | Performance & Security Testing | Uses AI to design and analyze load tests, performance benchmarks, and security test scenarios (SAST/DAST augmentation). |
+| 8 | Continuous Quality Automation | Integrates AI-driven quality gates into CI/CD — automated test generation on PR, coverage enforcement, test health monitoring, and regression risk scoring. |
+| 9 | Quality Engineering Leadership | Designs org-wide AI-augmented testing strategies with measurable outcomes on defect rates, coverage quality, and deployment confidence. |
+
+**Your Score:** \_\_\_\_\_ / 9
+
+**Practical Benchmark Tasks by Level:**
+
+- **Level 2:** Generate a complete unit test suite for an existing utility module and validate all tests pass.
+- **Level 4:** Use AI to generate realistic test data for 5 edge cases that your existing test suite doesn't cover.
+- **Level 6:** Run AI-assisted mutation testing on a module to identify tests that pass but don't actually validate behavior; fix the gaps.
+- **Level 8:** Integrate an AI-powered quality gate into your CI/CD pipeline that generates tests for changed code and flags regressions.
+- **Level 9:** Design and measure an org-wide AI-assisted testing strategy that demonstrably improves defect detection rates.
+
+---
+
+## Section 4: AI-Assisted Design & Technical Communication
 
 *How effectively you use AI as a thinking partner for architecture, design decisions, planning, and technical writing.*
 
 | Score | Level | Description |
-|-------|-------|-------------|
+| --- | --- | --- |
 | 0 | No Experience | Has not used AI for design, planning, or documentation tasks. |
 | 1 | Explanation & Summary | Uses AI to summarize existing documentation or explain architectural concepts. |
 | 2 | Draft Generation | Uses AI to produce first drafts of technical documents (READMEs, API docs, user stories, acceptance criteria, commit messages, PR descriptions). |
@@ -103,12 +132,12 @@
 
 ---
 
-## Section 4: Debugging & Root Cause Analysis
+## Section 5: Debugging & Root Cause Analysis
 
 *How effectively you use AI to diagnose and resolve defects, including performance issues.*
 
 | Score | Level | Description |
-|-------|-------|-------------|
+| --- | --- | --- |
 | 0 | No Experience | Has not used AI for debugging. |
 | 1 | Error Lookup | Pastes error messages into AI to get an explanation of what went wrong. |
 | 2 | Fix Suggestion | Shares a failing code block and applies the AI-suggested fix. |
@@ -132,12 +161,12 @@
 
 ---
 
-## Section 5: AI Tool Fluency
+## Section 6: AI Tool Fluency
 
 *Breadth and depth of practical experience with AI development tooling, integration protocols ([MCP](https://modelcontextprotocol.io/)), and extensibility formats ([Agent Skills](https://agentskills.io/)).*
 
 | Score | Level | Description |
-|-------|-------|-------------|
+| --- | --- | --- |
 | 0 | No Experience | Has not used any AI development tools. |
 | 1 | Single Tool | Uses one AI assistant (e.g., GitHub Copilot or Claude) for occasional tasks. |
 | 2 | Multi-Tool Awareness | Has tried multiple tools (e.g., Copilot, Cursor, Claude, Gemini) and can articulate their strengths and trade-offs. |
@@ -161,12 +190,12 @@
 
 ---
 
-## Section 6: AI Automation & Agents
+## Section 7: AI Automation & Agents
 
 *How effectively you design and orchestrate AI agents to automate complex, multi-step workflows — leveraging MCP for tool access and Agent Skills for reusable capabilities.*
 
 | Score | Level | Description |
-|-------|-------|-------------|
+| --- | --- | --- |
 | 0 | No Experience | Has not used AI for task automation. |
 | 1 | Automation Awareness | Understands that AI can automate multi-step tasks beyond single-turn chat. |
 | 2 | Simple Automation | Uses AI to automate simple, repeatable tasks (boilerplate generation, formatting, commit messages). |
@@ -190,12 +219,12 @@
 
 ---
 
-## Section 7: Knowledge Engineering & RAG
+## Section 8: Knowledge Engineering & RAG
 
 *How effectively you curate, retrieve, and ground AI outputs in authoritative knowledge sources — including packaging domain knowledge as [Agent Skills](https://agentskills.io/) and exposing data via [MCP](https://modelcontextprotocol.io/) resources.*
 
 | Score | Level | Description |
-|-------|-------|-------------|
+| --- | --- | --- |
 | 0 | No Experience | Has not considered how context or knowledge sources affect AI output quality. |
 | 1 | Context Awareness | Understands that AI outputs depend heavily on the context provided. |
 | 2 | Manual Context Curation | Selects and includes relevant files, docs, or examples in prompts for better results. |
@@ -219,12 +248,12 @@
 
 ---
 
-## Section 8: AI Safety, Ethics & Risk Management
+## Section 9: AI Safety, Ethics & Risk Management
 
 *How thoughtfully you apply AI within appropriate boundaries in an enterprise context — including knowing when AI is not the right tool.*
 
 | Score | Level | Description |
-|-------|-------|-------------|
+| --- | --- | --- |
 | 0 | No Awareness | Has not considered risks of AI use in software development. |
 | 1 | Basic Caution | Knows not to share passwords or PII with AI tools. |
 | 2 | Policy Awareness | Understands company AI use policy and follows it consistently. |
@@ -248,26 +277,57 @@
 
 ---
 
+## Section 10: Collaborative AI Practices & Team Multiplier
+
+*How effectively you amplify AI capabilities across your team and organization — turning individual skill into collective impact.*
+
+| Score | Level | Description |
+| --- | --- | --- |
+| 0 | No Experience | Has not shared AI techniques or collaborated with others on AI-assisted work. |
+| 1 | Informal Sharing | Occasionally shares useful prompts, tips, or AI-generated outputs with teammates. |
+| 2 | Visible AI Use | Openly uses AI in pair programming, code reviews, and team discussions; explains AI-assisted approaches when asked. |
+| 3 | Resource Contribution | Contributes reusable prompts, instruction files, or Agent Skills to shared team repositories. |
+| 4 | Active Mentoring | Actively helps teammates improve their AI skills through pair sessions, reviews of AI-generated work, and sharing effective patterns and anti-patterns. |
+| 5 | Team Standards | Establishes team conventions for AI use — shared AGENTS.md files, prompt libraries, tool configurations, and quality norms for AI-generated code. |
+| 6 | Workshop & Training | Designs and delivers AI skills workshops, lunch-and-learns, or training materials tailored to the team's tech stack and workflows. |
+| 7 | Adoption Measurement | Measures team AI adoption and effectiveness — tracking metrics like AI-assisted PR rates, time savings, quality impact, and skill progression over time. |
+| 8 | Cross-Team Enablement | Scales AI enablement beyond own team — building shared platforms, reusable Agent Skills libraries, or communities of practice that accelerate adoption across the org. |
+| 9 | Organizational Impact | Designs and leads enterprise AI enablement programs with measurable productivity outcomes; recognized as an internal authority on AI-assisted development practices. |
+
+**Your Score:** \_\_\_\_\_ / 9
+
+**Practical Benchmark Tasks by Level:**
+
+- **Level 2:** Use AI visibly in a pair programming session and walk your partner through your prompting approach.
+- **Level 4:** Run a 1:1 mentoring session helping a teammate level up from basic prompting to structured, context-rich prompts with measurable improvement.
+- **Level 6:** Design and deliver a team workshop on AI-assisted development tailored to your team's stack and workflows.
+- **Level 8:** Build a shared Agent Skills library or prompt repository that at least 3 teams actively use; establish a cross-team community of practice.
+- **Level 9:** Measure and report the productivity impact of an AI enablement program across multiple teams with quantified outcomes.
+
+---
+
 ## Score Summary
 
 *Use the Score Key to determine your level per dimension.*
 
 | # | Dimension | Score (0–9) | Level |
-|---|-----------|:-----------:|-------|
+| --- | --- | :-: | --- |
 | 1 | Prompt Engineering | | |
 | 2 | AI-Assisted Code Generation & Review | | |
-| 3 | AI-Assisted Design & Technical Communication | | |
-| 4 | Debugging & Root Cause Analysis | | |
-| 5 | AI Tool Fluency | | |
-| 6 | AI Automation & Agents | | |
-| 7 | Knowledge Engineering & RAG | | |
-| 8 | AI Safety, Ethics & Risk Management | | |
-| | **Total (out of 72)** | | |
+| 3 | AI-Assisted Testing & Quality Assurance | | |
+| 4 | AI-Assisted Design & Technical Communication | | |
+| 5 | Debugging & Root Cause Analysis | | |
+| 6 | AI Tool Fluency | | |
+| 7 | AI Automation & Agents | | |
+| 8 | Knowledge Engineering & RAG | | |
+| 9 | AI Safety, Ethics & Risk Management | | |
+| 10 | Collaborative AI Practices & Team Multiplier | | |
+| | **Total (out of 90)** | | |
 
 **Per-dimension level mapping** (from Score Key):
 
 | Score | Level |
-|:-----:|-------|
+| :-: | --- |
 | 0 | No Experience |
 | 1–2 | Foundational |
 | 3–4 | Developing |
@@ -280,12 +340,12 @@
 ## Score Interpretation
 
 | Total Score | Profile | What It Means |
-|:-----------:|---------|---------------|
-| 0–14 | **Beginner** | AI tools are new. Focus on daily use of at least one tool to build fluency. |
-| 15–28 | **Developing** | Building habits. Prioritize prompt quality and consistent tool integration. |
-| 29–43 | **Proficient** | Effective practitioner. Begin contributing patterns and practices to the team. |
-| 44–57 | **Advanced** | Strong multiplier. Lead initiatives, build tooling, and mentor others. |
-| 58–72 | **Expert** | Organizational asset. Drive strategy, governance, and cross-team AI adoption. |
+| :-: | --- | --- |
+| 0–18 | **Beginner** | AI tools are new. Focus on daily use of at least one tool to build fluency. |
+| 19–36 | **Developing** | Building habits. Prioritize prompt quality and consistent tool integration. |
+| 37–54 | **Proficient** | Effective practitioner. Begin contributing patterns and practices to the team. |
+| 55–72 | **Advanced** | Strong multiplier. Lead initiatives, build tooling, and mentor others. |
+| 73–90 | **Expert** | Organizational asset. Drive strategy, governance, and cross-team AI adoption. |
 
 ---
 
@@ -295,16 +355,18 @@ Use these heuristics to prioritize your development:
 
 1. **Any dimension below 3?** Start there. Foundational gaps limit your ability to benefit from AI in daily work.
 2. **Safety below your other scores?** Close that gap next. High capability without risk awareness creates liability.
-3. **Design & Communication lagging Code Generation?** Senior engineers get the most leverage from AI-assisted design, architecture, and technical writing — not just implementation.
-4. **Widest gap between dimensions?** Balance your profile — a well-rounded practitioner contributes more than a narrow specialist.
-5. **All dimensions 5+?** Focus on the areas most relevant to your role and team needs, and begin mentoring others.
-6. **All dimensions 7+?** Shift toward organizational impact — build tooling, author guidelines, and lead adoption.
+3. **Testing lagging Code Generation?** High code generation without strong AI-assisted testing ships risk. These two should grow together.
+4. **Design & Communication lagging Code Generation?** Senior engineers get the most leverage from AI-assisted design, architecture, and technical writing — not just implementation.
+5. **Collaboration below 3 while other scores are 5+?** You're a capable individual contributor but not yet a team multiplier. Sharing your practices will have outsized impact.
+6. **Widest gap between dimensions?** Balance your profile — a well-rounded practitioner contributes more than a narrow specialist.
+7. **All dimensions 5+?** Focus on the areas most relevant to your role and team needs, and begin mentoring others.
+8. **All dimensions 7+?** Shift toward organizational impact — build tooling, author guidelines, and lead adoption.
 
 ---
 
 ## Reviewer Notes
 
-*To be completed by manager or tech lead (optional)*
+To be completed by manager or tech lead (optional).
 
 **Assessed by:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ &nbsp;&nbsp; **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_
 
