@@ -1,17 +1,17 @@
 @page {
   size: letter;
-  margin: 0.75in 0.85in;
+  margin: 0.5in 0.65in;
 
   @top-right {
     content: "AI Skills Assessment";
-    font-size: 8pt;
+    font-size: 7.5pt;
     color: #888;
     font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   }
 
   @bottom-center {
     content: counter(page);
-    font-size: 8pt;
+    font-size: 7.5pt;
     color: #888;
     font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   }
@@ -24,63 +24,63 @@
 
 body {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-  font-size: 10pt;
-  line-height: 1.5;
+  font-size: 9pt;
+  line-height: 1.35;
   color: #1a1a1a;
 }
 
 h1 {
-  font-size: 20pt;
+  font-size: 18pt;
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 4pt;
+  margin-bottom: 2pt;
   color: #111;
   page-break-after: avoid;
 }
 
 h2 {
-  font-size: 14pt;
+  font-size: 12pt;
   font-weight: 600;
-  margin-top: 18pt;
-  margin-bottom: 6pt;
+  margin-top: 10pt;
+  margin-bottom: 2pt;
   color: #222;
-  border-bottom: 1.5pt solid #ddd;
-  padding-bottom: 3pt;
+  border-bottom: 1pt solid #ddd;
+  padding-bottom: 2pt;
   page-break-after: avoid;
 }
 
 h3 {
-  font-size: 11pt;
+  font-size: 10pt;
   font-weight: 600;
-  margin-top: 12pt;
-  margin-bottom: 4pt;
+  margin-top: 6pt;
+  margin-bottom: 2pt;
   color: #333;
   page-break-after: avoid;
 }
 
 p {
-  margin-top: 4pt;
-  margin-bottom: 6pt;
+  margin-top: 2pt;
+  margin-bottom: 3pt;
 }
 
 blockquote {
-  margin: 8pt 0;
-  padding: 6pt 12pt;
-  border-left: 3pt solid #ccc;
+  margin: 4pt 0;
+  padding: 4pt 10pt;
+  border-left: 2.5pt solid #ccc;
   background: #f8f8f8;
-  font-size: 9.5pt;
+  font-size: 8.5pt;
   color: #444;
 }
 
 blockquote p {
-  margin: 2pt 0;
+  margin: 1pt 0;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 8pt 0;
-  font-size: 9pt;
+  margin: 4pt 0;
+  font-size: 8pt;
   page-break-inside: avoid;
 }
 
@@ -88,12 +88,12 @@ th {
   background: #f0f0f0;
   font-weight: 600;
   text-align: left;
-  padding: 5pt 6pt;
+  padding: 3pt 5pt;
   border: 0.75pt solid #ccc;
 }
 
 td {
-  padding: 4pt 6pt;
+  padding: 2.5pt 5pt;
   border: 0.75pt solid #ddd;
   vertical-align: top;
 }
@@ -111,18 +111,18 @@ em {
 }
 
 ul, ol {
-  margin: 4pt 0 6pt 0;
-  padding-left: 18pt;
+  margin: 2pt 0 3pt 0;
+  padding-left: 16pt;
 }
 
 li {
-  margin-bottom: 3pt;
+  margin-bottom: 1.5pt;
 }
 
 hr {
   border: none;
-  border-top: 1pt solid #ddd;
-  margin: 16pt 0;
+  border-top: 0.75pt solid #ddd;
+  margin: 8pt 0;
 }
 
 a {
@@ -132,15 +132,15 @@ a {
 
 code {
   font-family: "SF Mono", "Fira Code", "Consolas", monospace;
-  font-size: 8.5pt;
+  font-size: 7.5pt;
   background: #f4f4f4;
-  padding: 1pt 3pt;
+  padding: 1pt 2pt;
   border-radius: 2pt;
 }
 
 /* Score input lines */
 p:has(strong:first-child) {
-  margin-top: 8pt;
+  margin-top: 4pt;
 }
 
 /* Keep section headings with their tables */
