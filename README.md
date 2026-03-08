@@ -41,7 +41,7 @@ This assessment measures AI skills across **ten dimensions** on a 0–9 scale:
 
 ## Usage
 
-1. Open [`ai-skills-assessment.md`](ai-skills-assessment.md) for the full assessment.
+1. Open [`ai-skills-assessment-eng.md`](ai-skills-assessment-eng.md) for the full assessment.
 2. For each of the ten dimensions, read the level descriptions and select the score (0–9) that best describes your current capability.
 3. Use the practical benchmark tasks at each level to calibrate your self-rating.
 4. Sum your scores and refer to the interpretation table above.
