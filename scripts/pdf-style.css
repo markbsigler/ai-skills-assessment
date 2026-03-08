@@ -1,0 +1,150 @@
+@page {
+  size: letter;
+  margin: 0.75in 0.85in;
+
+  @top-right {
+    content: "AI Skills Assessment";
+    font-size: 8pt;
+    color: #888;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  @bottom-center {
+    content: counter(page);
+    font-size: 8pt;
+    color: #888;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  }
+}
+
+@page :first {
+  @top-right { content: none; }
+  @bottom-center { content: none; }
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 20pt;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 4pt;
+  color: #111;
+  page-break-after: avoid;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: 600;
+  margin-top: 18pt;
+  margin-bottom: 6pt;
+  color: #222;
+  border-bottom: 1.5pt solid #ddd;
+  padding-bottom: 3pt;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  margin-top: 12pt;
+  margin-bottom: 4pt;
+  color: #333;
+  page-break-after: avoid;
+}
+
+p {
+  margin-top: 4pt;
+  margin-bottom: 6pt;
+}
+
+blockquote {
+  margin: 8pt 0;
+  padding: 6pt 12pt;
+  border-left: 3pt solid #ccc;
+  background: #f8f8f8;
+  font-size: 9.5pt;
+  color: #444;
+}
+
+blockquote p {
+  margin: 2pt 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8pt 0;
+  font-size: 9pt;
+  page-break-inside: avoid;
+}
+
+th {
+  background: #f0f0f0;
+  font-weight: 600;
+  text-align: left;
+  padding: 5pt 6pt;
+  border: 0.75pt solid #ccc;
+}
+
+td {
+  padding: 4pt 6pt;
+  border: 0.75pt solid #ddd;
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  color: #555;
+}
+
+ul, ol {
+  margin: 4pt 0 6pt 0;
+  padding-left: 18pt;
+}
+
+li {
+  margin-bottom: 3pt;
+}
+
+hr {
+  border: none;
+  border-top: 1pt solid #ddd;
+  margin: 16pt 0;
+}
+
+a {
+  color: #1a6fb5;
+  text-decoration: none;
+}
+
+code {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 8.5pt;
+  background: #f4f4f4;
+  padding: 1pt 3pt;
+  border-radius: 2pt;
+}
+
+/* Score input lines */
+p:has(strong:first-child) {
+  margin-top: 8pt;
+}
+
+/* Keep section headings with their tables */
+h2 + p,
+h2 + p + table {
+  page-break-before: avoid;
+}
